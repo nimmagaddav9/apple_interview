@@ -1,48 +1,101 @@
-Use this flow for interview:
+Jeff Bell
+Introduce yourself
+visual consistentcy at apple
+ease of development
+experince in component libraries
+webcompnents libraries
+waht are up and downs in an projects I worked
+expericene with ai
+we told about copolit tell me more to impress here
+we do have claude code in apple
+what is mcp and agents
+if they asked have used mcp before
+did u built any agent?
 
-**1. Intro**
-“Hi, I’m Vijay. I’m a Senior UI Developer with 13+ years of experience building scalable .com and enterprise web applications using React.js, Angular, TypeScript, JavaScript, HTML5, CSS3, SCSS, and Redux.
+coding questions
+Q1.  what is the output?
+code --> what is the output(3 questions);
+1
+1
 
-Currently, I’m working with First Citizens Bank, where I handle both Back Office bank-user applications and client-facing features. My work mainly involves client enrollment flows, user management, access modifications, reporting features, and secure portal experiences.
+========
+1
+0
+=========
+Inside function → local count becomes 1 → prints 1
+Outside function → global count is still 0 → prints 0
 
-Before that, I worked with United Airlines on the React migration team, where we converted legacy .NET applications into React-based applications on united.com using ATMOS, which is United’s internal component library used company-wide.
 
-I worked on several customer-facing security and account-management features such as:
+Q2. console.log('1');
 
-Forgot Password
-Forgot MileagePlus Number
-Security Questions
-Sign-In and Authentication
-Miles Pooling
-United Club Pass
-Dashboard Updates
-Recent Activity
-KTN (Known Traveler Number)
+setTimeout(() => {
+    console.log('2');
+}, 0);
 
-I also worked extensively on accessibility compliance following WCAG guidelines.
+const p = new Promise((resolve) => resolve());
 
-For state management and async workflows, we used Redux and Redux-Saga to handle API calls, side effects, and middleware operations efficiently.
+p.then(() => console.log('3'));
 
-At Visa, I worked with the Accessibility Accelerator team, where we remediated and modernized modules like Application Management, Account Management, Portfolio Management, Analytics, Recurring Billing, and Virtual Terminal for banking clients such as Wells Fargo and Bank of America.
+(() => console.log('4'))();
 
-At Capital Group, I worked on the DAVIS project, which focused on data visualization. We built reusable Highcharts components using React and integrated them into AEM-based applications. I also worked on Creative Workbench, which was a content authoring and publishing platform used for Capital Group websites.
+1 → runs immediately
+4 → IIFE runs immediately
+3 → Promise (microtask) runs next
+2 → setTimeout (macrotask) runs last
+So answer: 1 → 4 → 3 → 2 ✅
 
-Earlier in my career, I worked with Cerner Corporation on healthcare and medical examination applications, Office Depot on Black Friday reporting systems, and Satinos Technologies where I developed portals including tax applications and educational websites.”
+// Problem Statement:
+// ------------------
+// Create an HTML input that accepts a 10 digit telephone number
+// 
+//
+// Example:
+// Example:
+// --------
+//
+// User types:  1234567890
+// Input shows: (123) 456-7890 -->
 
-**2. Architecture**
+index.html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <script type="module" src="/src/main.js"></script>
+    <title>HTML | CoderPad</title>
+  </head>
+  <body>
+   <input type="text" id="phone" maxlength="14" placeholder="(123) 456-7890"/>
+  </body>
+</html>
 
-“My frontend architecture approach is component-driven and feature-based. I usually separate the application into reusable components, feature modules, API service layer, state management, routing, styles, and utilities.
+main.js
+========================================
+import './style.css'
 
-For large applications, I focus on reusable components, TypeScript interfaces, lazy loading, clean folder structure, centralized API handling, and accessibility from the beginning. The goal is to make the application scalable, easy to maintain, and easy for multiple developers to work on.”
+console.log('Edit src/main.js to get started...')
 
-**3. Performance Optimization**
+const input = document.getElementById("phone");
 
-“For performance optimization, I first measure the issue instead of guessing. I use Chrome DevTools, Lighthouse, React Profiler, and bundle analyzer.
+input.addEventListener("input",(e)=>{
+  let value = e.target.value.replace(/\D/g,"");
+  value = value.substring(0,10);
+  let formatted = "";
 
-In React, I optimize using lazy loading, code splitting, React.memo, useMemo, useCallback, virtualization for large tables, debounced search, API caching, and reducing unnecessary re-renders. I also optimize assets and remove unused dependencies to reduce bundle size.”
+  if(value.length > 0){
+    formatted +="("+ value.substring(0,3); 
+  }
+   if(value.length >= 4){
+        formatted +=") "+ value.substring(3,6); 
 
-**4. State Management**
+  }
+   if (value.length >= 7){
+            formatted +="-"+ value.substring(6,10); 
 
-“For state management, I first identify the type of state. Local UI state like modal open, tabs, or dropdowns stays inside the component using useState. Shared application state like user info, permissions, filters, or dashboard data can go into Redux, Redux Toolkit, MobX, or Context.
+  }
+  e.target.value = formatted;
+})
 
-For async workflows, I’ve used Redux-Saga to handle API calls, side effects, retries, and complex flows. I don’t put everything into global state. I keep state clean, predictable, and based on actual business need.”
+//
