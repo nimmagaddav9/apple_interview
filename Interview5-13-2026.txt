@@ -1,10 +1,33 @@
 Use this flow for interview:
 
 **1. Intro**
+“Hi, I’m Vijay. I’m a Senior UI Developer with 13+ years of experience building scalable .com and enterprise web applications using React.js, Angular, TypeScript, JavaScript, HTML5, CSS3, SCSS, and Redux.
 
-“Hi, I’m Vijay. I’m a Senior Frontend/UI Developer with 13 years of experience building scalable enterprise web applications using React, TypeScript, Angular, JavaScript, SCSS, and modern frontend tools.
+Currently, I’m working with First Citizens Bank, where I handle both Back Office bank-user applications and client-facing features. My work mainly involves client enrollment flows, user management, access modifications, reporting features, and secure portal experiences.
 
-Most of my work has been around building reusable UI components, responsive design systems, accessibility-compliant applications, API integrations, and performance-focused frontend architecture. I’ve worked on enterprise platforms for banking, airlines, payments, and investment domains, where scalability, security, accessibility, and maintainability were very important.”
+Before that, I worked with United Airlines on the React migration team, where we converted legacy .NET applications into React-based applications on united.com using ATMOS, which is United’s internal component library used company-wide.
+
+I worked on several customer-facing security and account-management features such as:
+
+Forgot Password
+Forgot MileagePlus Number
+Security Questions
+Sign-In and Authentication
+Miles Pooling
+United Club Pass
+Dashboard Updates
+Recent Activity
+KTN (Known Traveler Number)
+
+I also worked extensively on accessibility compliance following WCAG guidelines.
+
+For state management and async workflows, we used Redux and Redux-Saga to handle API calls, side effects, and middleware operations efficiently.
+
+At Visa, I worked with the Accessibility Accelerator team, where we remediated and modernized modules like Application Management, Account Management, Portfolio Management, Analytics, Recurring Billing, and Virtual Terminal for banking clients such as Wells Fargo and Bank of America.
+
+At Capital Group, I worked on the DAVIS project, which focused on data visualization. We built reusable Highcharts components using React and integrated them into AEM-based applications. I also worked on Creative Workbench, which was a content authoring and publishing platform used for Capital Group websites.
+
+Earlier in my career, I worked with Cerner Corporation on healthcare and medical examination applications, Office Depot on Black Friday reporting systems, and Satinos Technologies where I developed portals including tax applications and educational websites.”
 
 **2. Architecture**
 
