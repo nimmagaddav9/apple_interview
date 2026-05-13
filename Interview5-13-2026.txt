@@ -1,4 +1,25 @@
-Intro
-Architecture
-Performance optimization
-statemanagent
+Use this flow for interview:
+
+**1. Intro**
+
+“Hi, I’m Vijay. I’m a Senior Frontend/UI Developer with 13 years of experience building scalable enterprise web applications using React, TypeScript, Angular, JavaScript, SCSS, and modern frontend tools.
+
+Most of my work has been around building reusable UI components, responsive design systems, accessibility-compliant applications, API integrations, and performance-focused frontend architecture. I’ve worked on enterprise platforms for banking, airlines, payments, and investment domains, where scalability, security, accessibility, and maintainability were very important.”
+
+**2. Architecture**
+
+“My frontend architecture approach is component-driven and feature-based. I usually separate the application into reusable components, feature modules, API service layer, state management, routing, styles, and utilities.
+
+For large applications, I focus on reusable components, TypeScript interfaces, lazy loading, clean folder structure, centralized API handling, and accessibility from the beginning. The goal is to make the application scalable, easy to maintain, and easy for multiple developers to work on.”
+
+**3. Performance Optimization**
+
+“For performance optimization, I first measure the issue instead of guessing. I use Chrome DevTools, Lighthouse, React Profiler, and bundle analyzer.
+
+In React, I optimize using lazy loading, code splitting, React.memo, useMemo, useCallback, virtualization for large tables, debounced search, API caching, and reducing unnecessary re-renders. I also optimize assets and remove unused dependencies to reduce bundle size.”
+
+**4. State Management**
+
+“For state management, I first identify the type of state. Local UI state like modal open, tabs, or dropdowns stays inside the component using useState. Shared application state like user info, permissions, filters, or dashboard data can go into Redux, Redux Toolkit, MobX, or Context.
+
+For async workflows, I’ve used Redux-Saga to handle API calls, side effects, retries, and complex flows. I don’t put everything into global state. I keep state clean, predictable, and based on actual business need.”
